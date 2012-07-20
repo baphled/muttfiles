@@ -20,14 +20,7 @@ set postponed=+postponed
 
 source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
 
-#
-# Mail boxes
-#
-mailboxes \
-  =inbox \
-  =twitter \
-  =linkedin \
-  =linkedin-digest
+mailboxes `ls -r ~/Mail | xargs | sed 's/ / =/g' |sed 's/inbox/=inbox/'`
 
 #
 # keybindings
